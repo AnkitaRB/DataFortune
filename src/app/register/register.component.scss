@@ -1,0 +1,181 @@
+.status-container{
+    width: 25%;
+    display: flex;
+    margin: auto;
+    margin-bottom: 10px;
+    .status-bar{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: auto;
+
+            // display: flex;
+            // flex-direction: column;
+            // align-items: center;
+            span{
+                color: #1b5875;
+                font-size: 8px;
+            }
+            .stage-block{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .stage-box{
+                width:20px;
+                height:20px;
+                background-color: #1b5875;
+                border-radius: 3px;
+                color: white;
+                font-size: 9px;
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                margin-bottom: 6px;
+                z-index: 999;
+            }
+            .progress-bar{
+                background-color: #1b5875;
+                height: 3px;
+                width: 11%;
+                display: flex;
+                top: 8.2em;
+                position: absolute;
+                z-index: 1;
+                margin-left: 19px;
+            }
+            > div {
+                &:last-child{
+                    .progress-bar{
+                        display: none;
+                    }
+                    .stage-box{
+                        background-color: white;
+                        color:#1b5875
+                    }
+                }
+                &:nth-child(2){
+                    .progress-bar{
+                        background-color: white;
+                    }
+                }
+            }
+    }
+}
+
+.register-container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    width: 35%;
+    margin: auto;
+    padding: 16px;
+    margin-bottom: 16px;
+    .note{
+        padding-bottom: 16px;
+    }
+    .email-note{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 14px;
+    }
+    .form-group{
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 14px;
+        label{
+            font-weight: bold;
+        }
+        input{
+            height: 24px;
+            margin: 2px 0;
+            border: 1.5px solid #dedede;
+        }
+        select{
+            appearance: none;
+            border-radius: 3px;
+            border: 1.5px solid #aaa;
+            width: 33%;
+            option{
+                font-size: 10px;
+            }
+        }
+        &.invalid{
+            label{
+                color: #a93a44;
+            }
+            input{
+                border: 1.5px solid #a93a44;
+                background-color: #ffe1e4;
+            }
+        }
+    }
+    .checkbox{
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        input{
+            height: 15px;
+            width: 15px;
+            appearance: none;
+            border: 1.5px solid #aaa;
+            margin: 0 2px 0 0;
+        }
+        #subscribe:checked::after { 
+            content: '✔';
+            font-size: 10px;
+            color: #1b5875;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+    }
+    .btn-submit{
+        min-height: 23px;
+        width: 33%;
+        font-size: 11px;
+        background-color: #1b5875;
+        border-radius: 3px;
+        border: 0;
+        color: #dedede;
+        word-wrap: break-word;
+        float: right;
+    }
+}
+
+.success-dialog{
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 35%;
+    border-radius: 5px;
+    padding: 16px;
+    margin: auto;
+    border: 1px solid #aaa;
+    span:first-child{
+        padding-bottom: 16px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    .text{
+        font-weight: 500;
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 599.98px){
+    .register-container{
+        width: 70%;
+    }
+    .status-container{
+        width: 50%;
+        .status-bar .progress-bar{
+            width: 21%;
+        }
+    }
+    
+}

@@ -1,0 +1,28 @@
+.home-container{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  .footer{
+    height: 30px;
+    width: 100%;
+    background-color: #aaaaaa;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-top: auto;
+  }
+  .header{
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: large;
+    button{
+      display: flex;
+      right: 0;
+      position: absolute;
+    }
+  }
+}
